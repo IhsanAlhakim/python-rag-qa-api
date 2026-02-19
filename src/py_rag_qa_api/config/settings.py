@@ -14,7 +14,7 @@ class Config:
     dbPort: str
     dbName: str
     openaiApiBase: str
-    opneaiApiKey: str
+    openaiApiKey: str
 
     
 def get_env(key: str) -> str:
@@ -31,5 +31,5 @@ def create_config() -> Config:
         dbPort=get_env("DB_PORT"),
         dbName=get_env("DB_NAME"),
         openaiApiBase=get_env("OPENAI_API_BASE"),
-        opneaiApiKey=get_env("OPENAI_API_KEY"),
+        openaiApiKey=get_env("OPENAI_API_KEY"),
     )

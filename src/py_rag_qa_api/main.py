@@ -35,7 +35,7 @@ async def answer(qa:QA, req: Request):
     cfg: Config = req.app.state.cfg
 
     llm = OpenAI(
-        api_key=cfg.opneaiApiKey,
+        api_key=cfg.openaiApiKey,
         base_url=cfg.openaiApiBase
     )
     llmID = llm.models.list().data[0].id
