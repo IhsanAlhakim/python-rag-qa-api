@@ -1,2 +1,0 @@
-set PYTHONPATH=src 
-uv run -m py_rag_qa_api.ingestion.ingest
