@@ -23,7 +23,7 @@ class RAGService:
         )
 
         instruction = f""""
-        You are a helpful chatbor to answer question about cat facts.
+        You are a helpful chatbot to answer question about cat facts.
         Answer the question using ONLY relevant information from the context.
         Ignore any information that is not related to the question.
 
