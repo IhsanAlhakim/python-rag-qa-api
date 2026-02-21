@@ -17,3 +17,18 @@ def createDBConnPool(cfg: Config) -> psycopg2.pool.ThreadedConnectionPool:
     except Exception as e:
         print(f"failed to connect to the database: {e}")
         raise
+
+def connect(cfg: Config) -> psycopg2.extensions.connection:
+    try:
+        conn = psycopg2.connect(
+            user=cfg.dbUser,
+            password=cfg.dbPass,
+            host=cfg.dbHost,
+            port=cfg.dbPort,
+            dbname=cfg.dbName
+        )
+        print("Connection successful")
+        return conn
+    except Exception as e:
+        print(f"failed to connect to the database: {e}")
+        raise
