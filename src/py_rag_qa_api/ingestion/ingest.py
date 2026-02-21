@@ -1,8 +1,8 @@
 from psycopg2.extras import execute_values
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from py_rag_qa_api.vectordb.store import connect
-from py_rag_qa_api.config.settings import create_config
+from py_rag_qa_api.db.store import connect
+from py_rag_qa_api.core.config import create_config
 
 model = SentenceTransformer("all-MiniLM-l6-v2")
 
